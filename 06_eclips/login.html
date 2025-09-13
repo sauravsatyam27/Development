@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+</head>
+<body>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #96cddc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #ffe0ad;
+      padding: 30px;
+      border-radius: 8px;
+      width: 400px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    form label {
+      font-weight: bold;
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #000000;
+    }
+
+    .register-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .register-link a {
+      color: blue;
+      text-decoration: none;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
+  <div class="container">
+    <h1>Login Page</h1>
+    <form method="post" action="loginvalidate.jsp">
+      <label>User Name</label>
+      <input type="text" name="uname" placeholder="Enter Username here" required>
+
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Enter password here" required>
+
+      <button type="submit">Sign In</button>
+
+      <p class="register-link">
+        Not Registered? <a href="Main.jsp">Register Here</a>
+      </p>
+    </form>
+  </div>
+</body>
+</html>

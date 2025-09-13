@@ -1,0 +1,116 @@
+ body {
+   background-color: #141414;
+   /* Dark background */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   font-family: Arial, sans-serif;
+   overflow: hidden;
+   /* Prevents scrollbars */
+ }
+
+ .netflix-btn {
+   padding: 15px 40px;
+   background-color: #141414;
+   border: 2px solid #555;
+   color: white;
+   font-size: 24px;
+   font-weight: bold;
+   text-transform: uppercase;
+   border-radius: 50px;
+   cursor: pointer;
+   transition: all 0.4s ease;
+   /* Smooth transition */
+   position: relative;
+   overflow: hidden;
+   letter-spacing: 5px;
+   /* Initial letter spacing */
+   z-index: 1;
+   /* Animation properties */
+   animation: none;
+   /* Initially no animation */
+ }
+
+ /* --- Barcode Effect on Hover --- */
+ .netflix-btn:hover {
+   letter-spacing: 0px;
+   /* Reduces letter spacing to 0 */
+   border: 2px solid #e50914;
+   /* Changes border color */
+   color: transparent;
+   /* Makes text transparent */
+ }
+
+ .netflix-btn::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   /* Repeating red and transparent bars */
+   background: repeating-linear-gradient(90deg, #e50914 0 1px, transparent 1px 12px);
+   background-size: 0% 100%;
+   /* Initially invisible */
+   background-repeat: no-repeat;
+   transition: background-size 0.4s ease;
+   /* Smooth transition for the background */
+   z-index: -1;
+ }
+
+ .netflix-btn:hover::before {
+   background-size: 100% 100%;
+   /* Expands to show the barcode */
+ }
+
+ /* --- Glow Effect --- */
+ .netflix-btn:hover {
+   animation: glow-animation 0.8s forwards;
+   /* Triggers the glow animation */
+   animation-delay: 0.4s;
+   /* Starts after the barcode animation finishes */
+ }
+
+ @keyframes glow-animation {
+   0% {
+     box-shadow: none;
+     text-shadow: none;
+   }
+
+   100% {
+     box-shadow: 0 0 10px #e50914, 0 0 20px #e50914, 0 0 30px #e50914;
+     color: white;
+     /* Returns text color */
+     text-shadow: 0 0 5px #e50914, 0 0 10px #e50914;
+     background-color: #e50914;
+     /* Changes background color */
+     border: 2px solid #e50914;
+     /* Matches border color */
+   }
+ }
+
+ /* Hide default cursor */
+ body {
+   cursor: none;
+ }
+
+ /* Custom cursor */
+ .cursor {
+   width: 20px;
+   height: 20px;
+   border: 2px solid #e50914;
+   border-radius: 50%;
+   position: fixed;
+   pointer-events: none;
+   transform: translate(-50%, -50%);
+   transition: transform 0.1s ease-out, box-shadow 0.3s ease;
+   z-index: 9999;
+ }
+
+ /* When hovering over the Netflix button */
+ .netflix-btn:hover~.cursor {
+   transform: scale(2) translate(-50%, -50%);
+   box-shadow: 0 0 15px #e50914, 0 0 30px #e50914;
+   background-color: rgba(229, 9, 20, 0.3);
+ }

@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #5d9b9e;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url(registration.jpg);
+  background-size: cover;
+}
+
+.container {
+  background-color: #e4e0d7;
+  padding: 30px;
+  border-radius: 8px;
+  width: 400px;
+
+  /* shadow: X-offset Y-offset blur-radius spread-radius color */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #27de16;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background-color: #121507;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.login-link a {
+  color: blue;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.container h1{
+    font-family: 'Arial', sans-serif;
+
+}
+</style>
+
+
+  <div class="container">
+    <h1>Library Registration Page</h1>
+
+    <form method ="post" action ="reg.jsp">
+      <label>User Name</label>
+      <input type="text" placeholder="Enter Username here"  name ="uname" required>
+
+      <label>Password</label>
+      <input type="password" placeholder="Enter password here" name ="password" required>
+
+      <label>Name</label>
+      <input type="text" placeholder="Enter Username here" name ="name" required>
+
+      <label>Email address</label>
+      <input type="email" placeholder="Enter Email Id here" name ="email" required>
+
+      <label>DOB</label>
+      <input type="date" name ="dob" required>
+
+      <label>City</label>
+      <input type="text" placeholder="Enter City here" name ="city" required>
+
+      <button type="submit">Sign Up</button>
+
+      <p class="login-link">
+        Have an Account? Kindly <a href="login.jsp">Login Here</a>
+      </p>
+    </form>
+  </div>
+</body>
+</html>

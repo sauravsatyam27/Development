@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:#f5efe6 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) ;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Screen */
+
+.screen{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+}
+
+.screen.active{
+    display: block;
+}
+
+#start-screen h1{
+    color: orangered;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+#start-screen p{
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+}
+
+.quiz-header{
+    margin-bottom: 2rem;
+}
+#question-text{
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height:1.4 ;
+}
+
+.quiz-info{
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.answer-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+.answer-btn{
+    background-color: white;
+    color: #333;
+    border-radius: 2px solid #eadbc8;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.answer-btn:hover{
+    background-color: #87eeec;
+    border-color: #dac0ae;
+}
+
+.answer-btn.correct{
+    background-color: #1aff00;
+    border-color: #f9c815;
+    color: green;
+}
+
+.answer-btn.incorrect{
+    background-color: #e6fff0;
+    border-color: #a3f0c4;
+    color: rgb(234, 6, 6);
+}
+
+.progress-bar{
+    height: 10px;
+    background-color: #f5efe6;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.progress{
+    height: 100px;
+    background-color: rgb(232, 79, 24);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+
+
+#result-screen h1{
+    color: orangered;
+    margin-bottom: 30px;
+}
+
+.result-info{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.result-info p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#result-message{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: orangered;
+}
+
+button{
+    background-color: orangered;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+}
+
+button:hover{
+    background-color: rgb(255, 0, 119);
+}
+
+/* responsive design */
+
+@media(max-width:500px){
+    .screen{
+        padding: 1rem;
+    }
+    #start-screen h1{
+        font-size: 2rem;
+    }
+}
